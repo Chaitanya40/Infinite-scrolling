@@ -1,0 +1,22 @@
+<div class="products-table"> 
+  <table class="table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Description</th>
+        <th>SKU</th>
+        <th>quantity</th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= @products.each do |product| %>
+        <tr>
+          <td><%= product.id %></td>
+          <td><%= product.description %></td>
+          <td><%= product.sku %></td>
+          <td><%= product.quantity %></td>
+        </tr>
+      <% end %>  
+    </tbody>
+  </table>
+</div>
