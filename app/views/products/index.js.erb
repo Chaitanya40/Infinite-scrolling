@@ -1,0 +1,7 @@
+$('#products-table').append("<%=j render(partial: 'products', collection: @products, format: 'html') %>");
+
+<% if @posts.current_page == @posts.total_pages %>
+  $('#view-more').remove();
+<% else %>
+  $('#view-more a').attr('href', '<%= url_for(page: @products.current_page + 1) %>');
+<% end %>
